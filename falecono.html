@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de site | Fale Conosco</title>
+    <link rel="stylesheet" href="style.css" media="screen">
+    <link rel="stylesheet" href="impressora.css" media="print">
+    <style>
+        body {
+            height: 100vh;
+            background-image: linear-gradient(to right, black, rgb(48, 48, 48), black);
+        }
+        h2 {
+            text-align: center;
+        }
+        div {
+            background-color: white;
+            padding: 1%;
+            width: 300px;
+            margin: auto;
+            border-radius: 30px;
+        }
+         p {
+            text-align: center;
+        }
+        span {
+            color: rgba(0, 0, 0, 0.589);
+        }
+
+        form input, select {
+            height: 23px;
+            border-radius: 9px;
+            padding: 5px;
+            color: white;
+            background-color: #000000a6;
+            border: 0;
+        }
+        form input::placeholder {
+            color: rgb(206, 206, 206);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a class="normal" href="Index.html">Home</a>
+        <a class="normal" href="404.html">Matérias</a>
+        <a class="normal" href="404.html">Quem somos</a>
+        <a class="normal" href="falecono.html">Fale conosco</a>
+        <span id="login">
+            <a href="login.html">Entre</a>
+            <a href="cadastro.html">Cadastre-se</a>
+        </span>
+    </nav>
+    <div>
+        <h2>Preencha o Formulário Abaixo e clique em Enviar</h2>
+        <form action="Index.html" method="post">
+            <p>
+                <label for="ide">De: </label>
+                <br>
+                <input type="text" name="de" id="ide" required>
+            </p>
+            <p>
+                <label for="iestado">Selecione seu Estado: </label>
+                <br>
+                <select name="estado" id="iestado">
+                    <option value="">Selecione o Estado</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </p>
+            <p>
+                <label for="ipara">Para: </label>
+                <br>
+                <input type="text" name="para" id="ipara" required>
+            </p>
+            <p>
+                <label for="iimg">Escolha uma imagem <span>(opcional)</span></label>
+                <br>
+                <input type="file" name="img" id="iimg">
+            </p>
+            <p>
+                <label for="imensagem">Sua Mensagem: </label>
+                <br>
+                <textarea name="msg" id="imensagem" cols="30" rows="10" required></textarea>
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+
+        </form>
+    </div>
+    
+</body>
+</html>

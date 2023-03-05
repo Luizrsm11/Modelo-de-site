@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Site | Login</title>
+    <link rel="stylesheet" href="style.css" media="screen">
+    <link rel="stylesheet" href="impressora.css" media="print">
+    <style>
+        body {
+            background-image: linear-gradient(to right, black, rgb(22, 22, 22));
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 50px;
+            margin: 30px auto 50px auto;
+        }
+        h2 {
+            text-align: center;
+        }
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            background-color: white;
+            padding: 1%;
+            width: 310px;
+            margin: auto;
+            border-radius: 30px;
+        }
+         p {
+            text-align: center;
+        }
+        span {
+            color: rgba(0, 0, 0, 0.589);
+        }
+
+        form input {
+            height: 23px;
+            border-radius: 9px;
+            padding: 5px;
+            color: white;
+            background-color: #000000a6;
+            border: 0;
+        }
+        form input::placeholder {
+            color: rgb(206, 206, 206);
+        }
+         a {
+            text-decoration: none;
+            color: rgb(33, 33, 33);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="normal" href="Index.html">Home</a>
+            <a class="normal" href="404.html">Matérias</a>
+            <a class="normal" href="404.html">Quem somos</a>
+            <a class="normal" href="falecono.html">Fale conosco</a>
+            <span id="login">
+                <a href="login.html">Entre</a>
+                <a href="cadastro.html">Cadastre-se</a>
+            </span>
+        </nav>
+        <div>
+            <h2>Login</h2>
+            <form action="Index.html" method="post">
+                <p>
+                    <label for="inick">Usuário: </label>
+                    <br>
+                    <input type="text" name="nick" id="inick" required placeholder="Ex. Pessoa1234" maxlength="15" minlength="5" autocomplete="username">
+                </p>
+                <p>
+                    <label for="iemail">E-mail</label>
+                    <br>
+                    <input type="email" name="email" id="iemail" required placeholder="Ex.Seu@email.com.br" autocomplete="email">
+                </p>
+                <p>
+                    <label for="isenha">Senha: </label>
+                    <br>
+                    <input type="password" name="senha" id="isenha" required minlength="8" autocomplete="current-password">
+                </p>
+                <p>
+                    <input type="submit" value="Entre">
+                    <input type="reset" value="Limpar">
+                </p>
+
+            </form>
+            <p>Não tem uma conta? <a class="mudar-login" href="cadastro.html">Cadastre-se.</a></p>
+        </div>
+    </header>
+    
+</body>
+</html>

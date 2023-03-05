@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Site | Cadastre-se</title>
+    <link rel="stylesheet" href="style.css" media="screen">
+    <link rel="stylesheet" href="impressora.css" media="print">
+    <style>
+        body {
+            background-image: radial-gradient( black, rgb(22, 22, 22));
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 50px;
+            margin: 30px auto 50px auto;
+        }
+        h2 {
+            text-align: center;
+        }
+        div {
+            background-color: white;
+            padding: 1%;
+            width: 300px;
+            margin: auto;
+            border-radius: 30px;
+        }
+         p {
+            text-align: center;
+        }
+        span {
+            color: rgba(0, 0, 0, 0.589);
+        }
+
+        form input {
+            height: 23px;
+            border-radius: 9px;
+            padding: 5px;
+            color: white;
+            background-color: #000000a6;
+            border: 0;
+        }
+        form input::placeholder {
+            color: rgb(206, 206, 206);
+        }
+         a {
+            text-decoration: none;
+            color: rgb(33, 33, 33);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="normal" href="Index.html">Home</a>
+            <a class="normal" href="404.html">Matérias</a>
+            <a class="normal" href="404.html">Quem somos</a>
+            <a class="normal" href="falecono.html">Fale conosco</a>
+            <span id="login">
+                <a href="login.html">Entre</a>
+                <a href="cadastro.html">Cadastre-se</a>
+            </span>
+        </nav>
+        <div>
+            <h2>Cadastre-se</h2>
+            <form action="Index.html" method="post">
+                    <p>
+                        <label for="inome">Nome: </label>
+                        <br>
+                        <input type="text" name="nome" id="inome" required autocomplete="name">
+                    </p>
+                    <p>
+                        <label for="isobrenome">Sobrenome: </label>
+                        <br>
+                        <input type="text" name="sobrenome" id="isobrenome" required autocomplete="family-name">
+                    </p>
+                    <p>
+                        <label for="inick">Como deseja ser chamado(a) <span>(usuário)</span>: </label>
+                        <br>
+                        <input type="text" name="nick" id="inick" required placeholder="Ex. Pessoa1234" maxlength="15" minlength="5" autocomplete="username">
+                    </p>
+                <p>
+                    <label for="iemail">E-mail</label>
+                    <br>
+                    <input type="email" name="email" id="iemail" required placeholder="Ex.Seu@email.com.br" autocomplete="email">
+                </p>
+                <p>
+                    <label for="itel">Telefone <span>(opcional)</span></label>
+                    <input type="tel" name="tel" id="itel" autocomplete="tel" placeholder="Fixo ou Celular. Sem DDD" pattern="^[0-9]{4,5}-[0-9]{4}$">
+                </p>
+                <p>
+                    <label for="isenha">Senha: </label>
+                    <br>
+                    <input type="password" name="senha" id="isenha" required minlength="8" autocomplete="new-password">
+                </p>
+                <p>
+                    <label for="iconfsenha">Confirme a sua senha: </label>
+                    <br>
+                    <input type="password" name="confsenha" id="iconfsenha" required minlength="8" autocomplete="new-password">
+                </p>
+                <p>
+                    Sou...
+                    <br>
+                    <input type="radio" name="mascfem" id="imasc" checked>
+                    <label style="margin-right: 20px;" for="imasc">Homem</label>
+                    <input type="radio" name="mascfem" id="ifem">
+                    <label for="ifem">Mulher</label>
+                </p>
+                <p>
+                        <fieldset>
+                            <legend>Permissôes</legend>
+                            <input type="checkbox" name="polipriv" id="ipolipriv" required>
+                            <label for="ipolipriv">Li e concordo com os <a href="">Termos de Uso</a>.</label>
+                            <br>
+                            <input type="checkbox" name="cookie" id="icookie">
+                            <label for="icookie">Concordo com os cookies obrigatórios, podendo aceitar todos após o cadastro</label>
+                        </fieldset>
+                </p>
+                <p>
+                    <input type="submit" value="Cadastrar">
+                    <input type="reset" value="Limpar">
+                </p>
+
+            </form>
+            <p>Já tem uma conta? <a class="mudar-login" href="login.html">Faça login.</a></p>
+        </div>
+    </header>
+</body>
+</html>
